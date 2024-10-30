@@ -31,19 +31,26 @@
     </li>
 </ul>
 
+<br>
+<br>
+
 <ul>
   <% @questions.each do |question| %>
     <li>
+      <p>Question N°<%= question.number %>/<%= @questions.all.length %></p>
       <h4><%= question.question %></h4>
       <ul>
         <% question.answers.each do |answer| %>
-          <li><label><input type="radio" name="" value="" /><%= answer %></label></li>
+          <li><label><input type="radio" name="question<%= question.number %>" value="" /><%= answer %></label></li>
         <% end %>
       </ul>
+      <button class="p-4 bg-[#3AFF3A]">Valider!</button>
     </li>
     <% end %>
 </ul>
 
-<button class="view-results p-4 bg-[#3AFF3A]" onclick="returnScore()">View Results</button>
+<br>
+<br>
 
+<button class="view-results p-4 bg-[#3AFF3A]" onclick="returnScore()">View Results</button>
 <span id="myresults" class="my-results">My results will appear here</span>
