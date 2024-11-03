@@ -54,24 +54,24 @@ puts 'Destroying questions and games'
   Friend.create!(
     name: "Sonic",
     avatar: ActionController::Base.helpers.asset_path('avatars/avatar_2.jpg'),
-    message: "Tu pues la merde!"
+    message: "Tu pues la merde! Tu pues la merde! Tu pues la merde! Tu pues la merde! Tu pues la merde! Tu pues la merde! Tu pues la merde! Tu pues la merde!"
   )
 
   Friend.create!(
     name: "Robin",
     avatar: ActionController::Base.helpers.asset_path('avatars/avatar_4.jpg'),
-    message: "Tu pues la crotte!"
+    message: "Tu pues la crotte! Tu pues la crotte! Tu pues la crotte! Tu pues la pisse!"
   )
 
   Friend.create!(
     name: "Olivier",
     avatar: ActionController::Base.helpers.asset_path('avatars/avatar_4.jpg'),
-    message: "Tu pues la pisse!"
+    message: "Tu pues la pisse! Tu pues la pisse! Tu pues la pisse!"
   )
 
   Friend.create!(
     name: "Edouard",
     avatar: ActionController::Base.helpers.asset_path('avatars/avatar_2.jpg'),
-    message: "Tu pues le vomi!"
+    message: "Tu pues le vomi! Tu pues la pisse! Tu pues la pisse!"
   )
   puts 'game created'

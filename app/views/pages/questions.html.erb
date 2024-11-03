@@ -1,33 +1,27 @@
-<ul data-controller="questions">
-  <%= audio_tag "zelda_chime.mp3" %>
-  <%= audio_tag "wrong_buzzer.mp3" %>
+<section class="h-screen flex flex-col justify-center items-center">
 
-  <p data-questions-target="lives">Nombre de vies: 3</p>
-
-  <br>
-
-  <% @questions.each_with_index do |question, index| %>
-    <li data-questions-target="question" class="<%= 'hidden' if index > 0 %>">
-      <p>Question N°<%= question.number %>/<%= @questions.all.length %></p>
-      <h4><%= question.question %></h4>
-      <ul>
-        <% question.answers.each do |answer| %>
-          <li>
-            <label>
-              <input data-questions-target="radioChoice" type="radio" name="question<%= question.number %>" value="<%= answer %>"/><%= answer %>
-            </label>
-          </li>
+  <div data-controller="questions" class="h-screen flex flex-col justify-center items-center gap-8">
+    <%= audio_tag "zelda_chime.mp3" %>
+    <%= audio_tag "wrong_buzzer.mp3" %>
+    <p data-questions-target="lives">Nombre de vies: 3</p>
+    <ul class="gap-8 flex flex-col justify-center items-center text-center">
+      <% @questions.each_with_index do |question, index| %>
+        <li data-questions-target="question" class="<%= 'hidden' if index > 0 %>">
+          <p class="mb-8">Question N°<%= question.number %>/<%= @questions.all.length %></p>
+          <h4><%= question.question %></h4>
+          <ul>
+            <% question.answers.each do |answer| %>
+              <li class="py-4">
+                <label>
+                  <input data-questions-target="radioChoice" type="radio" name="question<%= question.number %>" value="<%= answer %>"/><%= answer %>
+                </label>
+              </li>
+            <% end %>
+          </ul>
+          <button data-action="click->questions#checkAnswer" data-correct-answer="<%= question.answer %>" class="p-4 bg-[#3AFF3A] mt-4">Valider!</button>
+        </li>
         <% end %>
-      </ul>
+    </ul>
+  </div>
 
-      <br>
-
-      <button data-action="click->questions#checkAnswer" data-correct-answer="<%= question.answer %>" class="p-4 bg-[#3AFF3A]">Valider!</button>
-    </li>
-    <% end %>
-</ul>
-
-<br>
-
-<%= link_to 'game over path', game_over_path, class: 'p-4 bg-[#99CE0B]' %>
-<%= link_to 'win path', win_path, class: 'p-4 bg-[#99CE0B]' %>
+</section>
