@@ -10,7 +10,8 @@
 puts 'Destroying questions and games'
   Question.destroy_all
   Game.destroy_all
-  puts 'All questions and games have been destroyed'
+  Friend.destroy_all
+  puts 'All questions, games and friends have been destroyed'
 
   # Creating the projects
   puts 'Creating the questions'
@@ -46,5 +47,31 @@ puts 'Destroying questions and games'
   puts 'Creating the games'
   Game.create!(
     lives: 3
+  )
+
+
+  puts 'Creating the friends'
+  Friend.create!(
+    name: "Sonic",
+    avatar: ActionController::Base.helpers.asset_path('avatars/avatar_2.jpg'),
+    message: "Tu pues la merde!"
+  )
+
+  Friend.create!(
+    name: "Robin",
+    avatar: ActionController::Base.helpers.asset_path('avatars/avatar_4.jpg'),
+    message: "Tu pues la crotte!"
+  )
+
+  Friend.create!(
+    name: "Olivier",
+    avatar: ActionController::Base.helpers.asset_path('avatars/avatar_4.jpg'),
+    message: "Tu pues la pisse!"
+  )
+
+  Friend.create!(
+    name: "Edouard",
+    avatar: ActionController::Base.helpers.asset_path('avatars/avatar_2.jpg'),
+    message: "Tu pues le vomi!"
   )
   puts 'game created'

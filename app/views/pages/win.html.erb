@@ -1,1 +1,31 @@
 <h1>Bravo enculé tu as gagné!</h1>
+<br>
+<h1>Ici il y aura le montage photo en vidéo:</h1>
+<img src="https://www.shutterstock.com/image-vector/bravo-lettering-vector-text-banner-600nw-1598877403.jpg" alt="" class="">
+<br>
+<% @friends.each do |friend| %>
+  <div data-controller="toggle">
+    <%= image_tag friend.avatar, alt: "", class: 'w-24 h-auto rounded-full cursor-pointer', data: { action: "click->toggle#fire" } %>
+    <div data-toggle-target="togglableElement" class="smooth-toggle togglable-element">
+      <p><%= friend.name %>:</p>
+      <p><%= friend.message %></p>
+    </div>
+  </div>
+  <br>
+<% end %>
+
+<style>
+.smooth-toggle {
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.togglable-element {
+  overflow: hidden;
+  transition: height 0.3s ease;
+  height: 0;
+}
+
+.togglable-element.expanded {
+  height: auto; /* This will be dynamically set by JavaScript */
+}
+</style>
