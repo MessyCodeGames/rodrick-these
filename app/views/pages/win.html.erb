@@ -1,18 +1,25 @@
-<h1>Bravo enculé tu as gagné!</h1>
-<br>
-<h1>Ici il y aura le montage photo en vidéo:</h1>
-<img src="https://www.shutterstock.com/image-vector/bravo-lettering-vector-text-banner-600nw-1598877403.jpg" alt="" class="">
-<br>
-<% @friends.each do |friend| %>
-  <div data-controller="toggle">
-    <%= image_tag friend.avatar, alt: "", class: 'w-24 h-auto rounded-full cursor-pointer', data: { action: "click->toggle#fire" } %>
-    <div data-toggle-target="togglableElement" class="smooth-toggle togglable-element">
-      <p><%= friend.name %>:</p>
-      <p><%= friend.message %></p>
-    </div>
+<section class="flex flex-col justify-between items-center">
+  <div class="flex flex-col items-center px-8 text-center">
+    <h1>GG EASY NOOB!</h1>
+    <img src="https://www.shutterstock.com/image-vector/bravo-lettering-vector-text-banner-600nw-1598877403.jpg" alt="" class="">
+    <p>Bravo, clique sur les têtes pour lire les messages!</p>
+
+    <% @friends.each_with_index do |friend, index| %>
+      <div class="flex w-full ">
+        <div data-controller="toggle" class="flex flex-col items-center gap-4 ">
+          <div class="flex w-full <%= index % 2 == 0 ? 'justify-start' : 'justify-end' %>">
+            <%= image_tag friend.avatar, alt: "", class: "justify-left w-24 mt-4 h-auto rounded-full cursor-pointer", data: { action: "click->toggle#fire" } %>
+          </div>
+          <div data-toggle-target="togglableElement" class="w-full smooth-toggle togglable-element text-center">
+            <p class="flex <%= index % 2 == 0 ? 'justify-start' : 'justify-end' %>"><%= friend.name %>:</p>
+            <p class="text-center"><%= friend.message %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <br>
-<% end %>
+</section>
+
 
 <style>
 .smooth-toggle {
@@ -28,4 +35,6 @@
 .togglable-element.expanded {
   height: auto; /* This will be dynamically set by JavaScript */
 }
+
+/* * {border: 1px red solid} */
 </style>
