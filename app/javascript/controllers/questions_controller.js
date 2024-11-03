@@ -2,23 +2,37 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="questions"
 export default class extends Controller {
-  static targets = [ "bouton", "reference" ]
+  static targets = ["radioChoice", "lives", "question"]
+  static currentLives = 3;
 
-  connect() {
-    console.log("Hello, this is the questions controller")
-  }
+  // connect() {
+  //   console.log("Hello, this is the questions controller")
+  // }
 
-  hide () {
-    console.log("I have clicked on the fucker")
-    this.boutonTarget.innerText = "J'a cliqué"
-    if (this.boutonTarget.classList.contains("bg-[#3AFF3A]")) {
-      this.boutonTarget.classList.add("bg-[#19A1EE]")
-      this.boutonTarget.classList.remove("bg-[#3AFF3A]")
+  checkAnswer(event) {
+    const button = event.currentTarget;
+    const correctAnswer = button.dataset.correctAnswer;
+    const questionNumber = button.previousElementSibling.querySelector('input[type="radio"]').name;
+    const selectedRadio = this.radioChoiceTargets.find(radio => radio.name === questionNumber && radio.checked);
+
+    if (selectedRadio) {
+      const userAnswer = selectedRadio.value;
+      if (userAnswer === correctAnswer) {
+        console.log(`Correct answer for question ${questionNumber}: ${userAnswer}`);
+        const currentQuestion = button.closest('[data-questions-target="question"]');
+        const nextQuestion = this.questionTargets[this.questionTargets.indexOf(currentQuestion) + 1];
+        if (nextQuestion) {
+          currentQuestion.classList.add('hidden');
+          nextQuestion.classList.remove('hidden');
+        }
+      } else {
+        console.log(`Incorrect answer for question ${questionNumber}. Selected: ${userAnswer}, Correct: ${correctAnswer}`);
+        this.constructor.currentLives -= 1;
+      }
     } else {
-      this.boutonTarget.classList.add("bg-[#3AFF3A]")
-      this.boutonTarget.classList.remove("bg-[#19A1EE]")
+      console.log(`No answer selected for question ${questionNumber}`);
     }
-
-    this.referenceTarget.classList.remove("hidden")
+    console.log(`Current lives: ${this.constructor.currentLives}`);
+    this.livesTarget.innerText = `Nombre de vies: ${this.constructor.currentLives}`;
   }
 }
