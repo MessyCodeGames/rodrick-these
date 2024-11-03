@@ -51,6 +51,14 @@
 
 <br>
 <br>
+<div data-controller="questions">
+  <button
+    class="view-results p-4 bg-[#3AFF3A]" onclick=""
+    data-action="click->questions#hide"
+    data-questions-target="bouton">
+      View Results
+  </button>
+  <a data-questions-target="reference" class="hidden" href="">Bonjour</a>
+</div>
 
-<button class="view-results p-4 bg-[#3AFF3A]" onclick="returnScore()">View Results</button>
 <span id="myresults" class="my-results">My results will appear here</span>
