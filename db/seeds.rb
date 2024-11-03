@@ -49,24 +49,29 @@ puts 'Destroying questions and games'
     lives: 3
   )
 
+
   puts 'Creating the friends'
   Friend.create!(
-    avatar: "",
+    name: "Sonic",
+    avatar: ActionController::Base.helpers.asset_path('avatars/avatar_2.jpg'),
     message: "Tu pues la merde!"
   )
 
   Friend.create!(
-    avatar: "",
+    name: "Robin",
+    avatar: ActionController::Base.helpers.asset_path('avatars/avatar_4.jpg'),
     message: "Tu pues la crotte!"
   )
 
   Friend.create!(
-    avatar: "",
+    name: "Olivier",
+    avatar: ActionController::Base.helpers.asset_path('avatars/avatar_4.jpg'),
     message: "Tu pues la pisse!"
   )
 
   Friend.create!(
-    avatar: "",
+    name: "Edouard",
+    avatar: ActionController::Base.helpers.asset_path('avatars/avatar_2.jpg'),
     message: "Tu pues le vomi!"
   )
   puts 'game created'
