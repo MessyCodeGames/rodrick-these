@@ -4,9 +4,11 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["radioChoice", "lives", "question"]
   static currentLives = 3;
+  audio = null;
 
   connect() {
     console.log("Hello, this is the questions controller")
+    this.audio = new Audio("/assets/zelda_chime.mp3");
   }
 
   checkAnswer(event) {
@@ -27,6 +29,9 @@ export default class extends Controller {
       const userAnswer = selectedRadio.value;
       if (userAnswer === correctAnswer) {
         console.log(`Correct answer for question ${questionNumber}: ${userAnswer}`);
+
+        this.audio.play();
+
         const currentQuestion = button.closest('[data-questions-target="question"]');
         const nextQuestion = this.questionTargets[this.questionTargets.indexOf(currentQuestion) + 1];
 
@@ -37,7 +42,7 @@ export default class extends Controller {
           // No more questions, redirect to win page
           window.location.href = '/win';
         }
-        
+
       } else {
         console.log(`Incorrect answer for question ${questionNumber}. Selected: ${userAnswer}, Correct: ${correctAnswer}`);
         this.constructor.currentLives -= 1;
