@@ -1,6 +1,9 @@
 <ul data-controller="questions">
+
   <p data-questions-target="lives">Nombre de vies: 3</p>
+
   <br>
+
   <% @questions.each_with_index do |question, index| %>
     <li data-questions-target="question" class="<%= 'hidden' if index > 0 %>">
       <p>Question N°<%= question.number %>/<%= @questions.all.length %></p>
@@ -14,7 +17,15 @@
           </li>
         <% end %>
       </ul>
-      <button data-action="click->questions#checkAnswer"  data-correct-answer="<%= question.answer %>" class="p-4 bg-[#3AFF3A]">Valider!</button>
+
+      <br>
+
+      <button data-action="click->questions#checkAnswer" data-correct-answer="<%= question.answer %>" class="p-4 bg-[#3AFF3A]">Valider!</button>
     </li>
     <% end %>
 </ul>
+
+<br>
+
+<%= link_to 'game over path', game_over_path, class: 'p-4 bg-[#99CE0B]' %>
+<%= link_to 'win path', win_path, class: 'p-4 bg-[#99CE0B]' %>

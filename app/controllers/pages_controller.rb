@@ -3,9 +3,9 @@ class PagesController < ApplicationController
   def home
   end
 
-  def quizz
+  def questions
     @questions = Question.all
-    @game = Game.last
+    # @game = Game.last
   end
 
   def game_over
