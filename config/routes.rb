@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   root "pages#home"
 
-  get "questions" => "pages#home"
+  get "questions" => "pages#quizz"
+  # get "quizz" => "pages#quizz"
+  get "game_over" => "pages#game_over"
 end

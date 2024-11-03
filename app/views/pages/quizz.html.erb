@@ -1,0 +1,20 @@
+<ul data-controller="questions">
+  <p data-questions-target="lives">Nombre de vies: 3</p>
+  <br>
+  <% @questions.each_with_index do |question, index| %>
+    <li data-questions-target="question" class="<%= 'hidden' if index > 0 %>">
+      <p>Question N°<%= question.number %>/<%= @questions.all.length %></p>
+      <h4><%= question.question %></h4>
+      <ul>
+        <% question.answers.each do |answer| %>
+          <li>
+            <label>
+              <input data-questions-target="radioChoice" type="radio" name="question<%= question.number %>" value="<%= answer %>"/><%= answer %>
+            </label>
+          </li>
+        <% end %>
+      </ul>
+      <button data-action="click->questions#checkAnswer"  data-correct-answer="<%= question.answer %>" class="p-4 bg-[#3AFF3A]">Valider!</button>
+    </li>
+    <% end %>
+</ul>
