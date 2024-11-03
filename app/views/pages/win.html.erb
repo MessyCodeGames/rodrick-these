@@ -1,1 +1,10 @@
 <h1>Bravo enculé tu as gagné!</h1>
+<br>
+
+<% @friends.each do |friend| %>
+  <div data-controller="toggle">
+    <img data-action="click->toggle#fire" class="w-24 h-auto rounded-full" src="https://img.freepik.com/photos-premium/belle-peinture-visage-cosmetique-isolee-fond-blanc_787273-27581.jpg?semt=ais_hybrid" alt="">
+    <p data-toggle-target="togglableElement"><%= friend.message %></p>
+  </div>
+  <br>
+<% end %>

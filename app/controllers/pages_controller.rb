@@ -12,5 +12,6 @@ class PagesController < ApplicationController
   end
 
   def win
+    @friends = Friend.all
   end
 end
