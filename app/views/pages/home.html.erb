@@ -1,12 +1,19 @@
 <section class="h-screen flex flex-col justify-between items-center">
   <div class="flex flex-col h-full justify-around items-center px-8 text-center">
-    <h1 class="text-bold text-3xl">Docteur Rodrick Gibert</h1>
+    <!-- <h1 class="text-bold text-3xl">Docteur Rodrick Gibert</h1> -->
 
-    <h2>Félicitations, tu as enfin fini ta thèse!</h2>
-    <p>Mais il te reste encore l'épreuve finale de validation pour prétendre à ton diplôme!</p>
-    <p>Ce quizz sur l'ASSE, fun-facts, mangas, statistiques et R!</p>
-    <p>Réponds à toutes les questions pour découvrir la surprise</p>
-    <p>Mais attention, tu ne disposes que de 3 vies!</p>
+
+    <div class="flex flex-col justify-center relative">
+      <h1 class="gold-text" data-text="Docteur Rodrick Gibert">
+        <span class="gold-text__highlight" data-text="Docteur Rodrick Gibert">Docteur Rodrick Gibert</span>
+      </h1>
+    </div>
+
+    <h2 class="text-white">Félicitations, tu as enfin fini ta thèse!</h2>
+    <p class="text-white">Mais il te reste encore l'épreuve finale de validation pour prétendre à ton diplôme!</p>
+    <p class="text-white">Ce quizz sur l'ASSE, fun-facts, mangas, statistiques et R!</p>
+    <p class="text-white">Réponds à toutes les questions pour découvrir la surprise</p>
+    <p class="text-white">Mais attention, tu ne disposes que de 3 vies!</p>
     <%= link_to 'Commencer le couize', questions_path, class: 'p-4 bg-[#99CE0B]' %>
   </div>
   <%= image_tag 'luffy.webp', alt: 'Commencer le couize', class: 'w-full h-auto' %>
