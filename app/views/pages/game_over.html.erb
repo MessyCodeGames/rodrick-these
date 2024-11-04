@@ -1,3 +1,17 @@
-<h1>Game over gros noob!</h1>
-<br>
-<%= link_to 'Retenter le quizz', questions_path, class: 'p-4 bg-[#99CE0B]' %>
+<section class="h-screen flex flex-col justify-center items-center">
+
+  <div class="flex flex-col justify-center items-center gap-8 px-8">
+
+    <p class="neon-text rotating-text text-center" data-text="GAME OVER">GAME OVER</p>
+
+    <%= image_tag 'yamcha.jpg', alt:"", class:"" %>
+
+    <%= link_to 'Retenter le quizz', questions_path, class: 'p-4 bg-[#99CE0B]' %>
+  </div>
+
+</section>
+
+
+<style>
+/* * {border: 1px red solid} */
+</style>
