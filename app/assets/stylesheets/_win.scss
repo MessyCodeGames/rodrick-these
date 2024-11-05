@@ -71,21 +71,33 @@
 }
 
 .dick-anim {
-  animation: dickAnimation 5s ease infinite;
+  animation: dickAnimation 5s cubic-bezier(.32,2,.55,.27) infinite;
+  // transition: all 0.3s cubic-bezier(.32,2,.55,.27);
 }
 
 @keyframes dickAnimation {
   0% {
     transform: rotate(0deg);
   }
-  25% {
+
+  50% {
     transform: rotate(5deg);
   }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
+}
+
+.scarf-anim {
+  animation: scarfAnimation 5s cubic-bezier(.32,2,.55,.27) infinite;
+  transform: rotate(-5deg);
+  // transition: all 0.3s cubic-bezier(.32,2,.55,.27);
+}
+
+@keyframes scarfAnimation {
+  0% {
     transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
   }
 }
 
