@@ -45,14 +45,6 @@ body {
   background-image: $background-gradient;
 }
 
-// .bg-home {
-//   background-image: asset-url('ste_4.jpg');
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   filter: grayscale(100%);
-// }
-
 .bg-home {
   position: relative;
   overflow: hidden; /* Ensure the pseudo-element stays within the bounds of the parent */
