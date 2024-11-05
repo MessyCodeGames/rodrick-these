@@ -6,7 +6,7 @@ export default class extends Controller {
 
   connect() {
     console.log("win page music controller reporting for duty");
-    this.iWillSurviveMusic = new Audio("/assets/i_will_survive.m4a");
+    this.iWillSurviveMusic = new Audio("/assets/league_champions.m4a");
   };
 
   playMusic() {

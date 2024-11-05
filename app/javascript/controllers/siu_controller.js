@@ -8,7 +8,7 @@ export default class extends Controller {
   connect() {
     console.log("win page music controller reporting for duty");
     this.siuSound = new Audio("/assets/siu.mp3");
-    this.leagueChampsMusic = new Audio("/assets/league_champions.m4a");
+    this.leagueChampsMusic = new Audio("/assets/i_will_survive.m4a");
   };
 
   unMute() {

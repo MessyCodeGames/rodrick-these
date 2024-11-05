@@ -37,6 +37,42 @@ h2, h3, h4, p, a {
   font-style: normal;
 }
 
+body {
+	background-image: $background-gradient;
+}
+
+.bg-title {
+  background-image: $background-gradient;
+}
+
+// .bg-home {
+//   background-image: asset-url('ste_4.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   filter: grayscale(100%);
+// }
+
+.bg-home {
+  position: relative;
+  overflow: hidden; /* Ensure the pseudo-element stays within the bounds of the parent */
+}
+
+.bg-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: asset-url('gguichard.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(25%); /* Apply greyscale to the background image */
+  z-index: -2; /* Ensure the pseudo-element is behind the content */
+}
+
 $shine-gradient:
 	linear-gradient(
 		100deg,
@@ -111,13 +147,6 @@ $decoration-gradient:
 	}
 }
 
-html {
-}
-
-body {
-	background-image: $background-gradient;
-}
-
 .gold-text {
 	font-family: 'Alegreya', serif;
 	font-style: italic;
@@ -140,7 +169,7 @@ body {
 		top: 0;
 		left: 0;
 		color: $color-gold;
-		z-index: -1;
+		z-index: 1;
 		text-shadow:
 			0 -1px 0 mix($color-gold--highlight,white,75%),
 			0 1px 0 mix($color-gold--shadow,black,75%),
