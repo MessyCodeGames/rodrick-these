@@ -1,4 +1,4 @@
-<section class="h-screen flex flex-col justify-between items-center relative overflow-hidden">
+<section data-controller="music" class="h-screen flex flex-col justify-between items-center relative overflow-hidden">
   <div class="flex flex-col h-full justify-around items-center px-8 text-center">
     <!-- <h1 class="text-bold text-3xl">Docteur Rodrick Gibert</h1> -->
 
@@ -10,11 +10,16 @@
 
     <%= image_tag 'audrick_portrait.png', alt: '', class: 'w-28 h-auto audrick-head-static' %>
 
+    <button data-action="click->music#playMusic" class="p-4 bg-[#3AFF3A] flex flex-row items-center gap-2 confettis-btn rounded-3xl">
+      <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7l0 72 0 264c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L448 147 192 223.8 192 432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L128 200l0-72c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/></svg>
+      <p>Mets la musique !</p>
+    </button>
+
     <h2 class="text-white">Félicitations, tu as enfin fini ta thèse!</h2>
     <p class="text-white">Mais il te reste encore l'épreuve finale de validation pour prétendre à ton diplôme!</p>
     <p class="text-white">Réponds à toutes les questions du COUIZE pour découvrir la surprise</p>
     <p class="text-white">Mais attention, tu ne disposes que de 3 vies!</p>
-    <%= link_to 'Commencer le couize', questions_path, class: 'p-4 bg-[#99CE0B]' %>
+    <%= link_to 'Commencer le couize', questions_path, class: 'p-4 bg-[#3AFF3A]' %>
   </div>
   <%= image_tag 'luffy.webp', alt: 'Commencer le couize', class: 'w-full h-auto' %>
   <%= image_tag 'audrick_portrait.png', alt: '', class: 'audrick-head-dynamic' %>
@@ -26,3 +31,36 @@
 <style>
 /* * {border: 1px red solid} */
 </style>
+
+<script>
+  const fireBtn = document.querySelector(".confettis-btn");
+
+fireBtn.addEventListener("click", () => {
+  const end = Date.now() + 6 * 1000;
+
+// go Buckeyes!
+const colors = ["#bb0000", "#ffffff"];
+
+(function frame() {
+  confetti({
+    particleCount: 2,
+    angle: 60,
+    spread: 55,
+    origin: { x: 0 },
+    colors: colors,
+  });
+
+  confetti({
+    particleCount: 2,
+    angle: 120,
+    spread: 55,
+    origin: { x: 1 },
+    colors: colors,
+  });
+
+  if (Date.now() < end) {
+    requestAnimationFrame(frame);
+  }
+})();
+});
+</script>
