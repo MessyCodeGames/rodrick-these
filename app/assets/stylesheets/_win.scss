@@ -7,16 +7,7 @@
   // --tiger-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/tiger-uppercut.gif);
   --tiger-image: url(https://motionbgs.com/media/1412/luffys-mighty-gear-5_312.gif);
 
-  //--texture-image: url(https://media.giphy.com/media/wdfxqCQVGHDlC/giphy.gif);
-}
-
-body {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-  // min-height: 100vh;
-  // background-color: var(--primary-color);
+  --texture-image: url(https://media.giphy.com/media/wdfxqCQVGHDlC/giphy.gif);
 }
 
 .text-wrapper { position: relative; }
@@ -39,4 +30,80 @@ body {
   }
 
   .noob { font-size: calc(var(--h1-font-size) / 1.825); }
+}
+
+.peeps-anim {
+  animation: peepsAnimStatic 5s ease infinite;
+}
+
+.peeps-anim-reverse {
+  animation: peepsAnimStaticReverse 5s ease infinite;
+}
+
+@keyframes peepsAnimStatic {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes peepsAnimStaticReverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+.dick-anim {
+  animation: dickAnimation 5s cubic-bezier(.32,2,.55,.27) infinite;
+  // transition: all 0.3s cubic-bezier(.32,2,.55,.27);
+}
+
+@keyframes dickAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.scarf-anim {
+  animation: scarfAnimation 5s cubic-bezier(.32,2,.55,.27) infinite;
+  transform: rotate(-5deg);
+  // transition: all 0.3s cubic-bezier(.32,2,.55,.27);
+}
+
+@keyframes scarfAnimation {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+
+
+
+* {
+  // border: 1px red solid;
 }

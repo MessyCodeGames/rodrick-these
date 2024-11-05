@@ -1,5 +1,5 @@
 <section class="flex flex-col justify-between items-center">
-  <div class="flex flex-col items-center px-8 text-center gap-8 mt-8">
+  <div data-controller="siu" class="flex flex-col items-center px-8 text-center gap-8 mt-8">
     <!-- <h1>GG EASY NOOB!</h1> -->
     <div class="text-wrapper">
       <h1 class="text-6xl gg">GG EASY
@@ -9,29 +9,38 @@
         <span class="text-5xl noob">NOOB !</span>
       </h1>
     </div>
-    <%= image_tag 'echarpe_asse.png', alt:'', class:''%>
+    <button data-action="click->siu#unMute" class="p-4 bg-[#3AFF3A] mt-4 flex flex-row items-center gap-2">
+      <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7l0 72 0 264c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L448 147 192 223.8 192 432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L128 200l0-72c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/></svg>
+      Mets le son !
+    </button>
+    <%= image_tag 'echarpe_asse.png', alt:'', class:'scarf-anim'%>
     <img src="https://www.shutterstock.com/image-vector/bravo-lettering-vector-text-banner-600nw-1598877403.jpg" alt="" class="">
     <p class="text-white">Bravo, clique sur les têtes pour lire les messages!</p>
 
     <% @friends.each_with_index do |friend, index| %>
-      <div class="flex w-full text-white relative">
-        <div data-controller="toggle" class="flex flex-col items-center gap-4 ">
-          <div class="flex w-full <%= index % 2 == 0 ? 'justify-start' : 'justify-end' %>">
-            <%= image_tag friend.avatar, alt: "", class: "justify-left w-24 mt-4 h-auto rounded-full cursor-pointer ", data: { action: "click->toggle#fire" } %>
-            <% if index % 2 == 0 %>
-              <%= image_tag 'luffy_chapeau.png', alt: "", class: "w-24 h-auto absolute -top-2 rotate-12 left-6" %>
-            <% else %>
-              <%= image_tag 'luffy_chapeau.png', alt: "", class: "w-24 h-auto absolute -top-2 rotate-12 -right-6" %>
-            <% end %>
+      <div class="flex text-white relative">
+        <div data-controller="toggle" class="flex flex-col gap-4">
+          <div class="flex w-full <%= index.even? ? 'justify-start' : 'justify-end' %>">
+            <div class="flex-shrink-0 <%= index.even? ? 'peeps-anim' : 'peeps-anim-reverse' %>">
+              <%= image_tag friend.avatar, alt: "", class: "w-24 h-auto mt-4 rounded-full cursor-pointer", data: { action: "click->toggle#fire" } %>
+              <% if index.even? %>
+                <%= image_tag 'luffy_chapeau.png', alt: "", class: "w-24 h-auto absolute -top-2 rotate-12 left-6" %>
+              <% else %>
+                <%= image_tag 'luffy_chapeau.png', alt: "", class: "w-24 h-auto absolute -top-2 rotate-12 -right-6" %>
+              <% end %>
+            </div>
           </div>
+
           <div data-toggle-target="togglableElement" class="w-full smooth-toggle togglable-element text-center">
-            <p class="flex <%= index % 2 == 0 ? 'justify-start' : 'justify-end' %>"><%= friend.name %>:</p>
+            <p class="<%= index.even? ? 'text-left' : 'text-right' %>"><%= friend.name %>:</p>
             <p class="text-center"><%= friend.message %></p>
           </div>
         </div>
       </div>
     <% end %>
-    <%= image_tag 'penis.png', alt:'', class:'mb-8'%>
+
+
+    <%= image_tag 'penis.png', alt:'', class:'mb-8 dick-anim origin-top-right'%>
   </div>
 </section>
 
