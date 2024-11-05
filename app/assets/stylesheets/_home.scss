@@ -69,7 +69,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: grayscale(25%); /* Apply greyscale to the background image */
+  filter: grayscale(40%); /* Apply greyscale to the background image */
   z-index: -2; /* Ensure the pseudo-element is behind the content */
 }
 
@@ -249,7 +249,7 @@ $decoration-gradient:
     transform: translate(-50%, -50%) rotate(0deg);
   }
   37% {
-    transform: translate(-50%, -50%) rotate(-20deg);
+    transform: translate(-50%, -50%) rotate(-10deg);
   }
 
   50% {
@@ -257,7 +257,7 @@ $decoration-gradient:
   }
 
   62% {
-    transform: translate(-50%, -50%) rotate(20deg);
+    transform: translate(-50%, -50%) rotate(10deg);
   }
 
   67% {

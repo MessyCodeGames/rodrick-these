@@ -7,7 +7,7 @@
   // --tiger-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/tiger-uppercut.gif);
   --tiger-image: url(https://motionbgs.com/media/1412/luffys-mighty-gear-5_312.gif);
 
-  --texture-image: url(https://media.giphy.com/media/wdfxqCQVGHDlC/giphy.gif);
+  // --texture-image: url(https://media.giphy.com/media/wdfxqCQVGHDlC/giphy.gif);
 }
 
 .text-wrapper { position: relative; }
@@ -101,6 +101,11 @@
   }
 }
 
+.peeps.active {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))
+          drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))
+          drop-shadow(0 0 30px rgba(255, 255, 255, 0.4));
+}
 
 
 

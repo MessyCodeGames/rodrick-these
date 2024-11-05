@@ -2,7 +2,7 @@
   <div class="flex flex-col h-full justify-around items-center px-8 text-center ">
     <!-- <h1 class="text-bold text-3xl">Docteur Rodrick Gibert</h1> -->
 
-    <div class="p-4 bg-black bg-opacity-80">
+    <div class="bg-black bg-opacity-90 p-4">
       <div class="flex flex-col justify-center relative">
         <h1 class="gold-text" data-text="Docteur Rodrick Gilbert">
           <span class="gold-text__highlight" data-text="Docteur Rodrick Gilbert">Docteur Rodrick Gilbert</span>
@@ -10,18 +10,25 @@
       </div>
     </div>
 
-    <%= image_tag 'audrick_portrait.png', alt: '', class: 'w-28 h-auto audrick-head-static' %>
+    <%= image_tag 'audrick_portrait.png', alt: '', class: 'w-28 h-auto audrick-head-static drop-shadow-xl' %>
 
-    <button data-action="click->music#playMusic" class="p-4 bg-[#3AFF3A] flex flex-row items-center gap-2 confettis-btn rounded-3xl">
-      <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7l0 72 0 264c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L448 147 192 223.8 192 432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L128 200l0-72c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/></svg>
-      <p>Mets la musique !</p>
+    <button data-action="click->music#playMusic" class="p-4 bg-[#099F55] flex flex-row items-center gap-2 confettis-btn rounded-3xl drop-shadow-xl">
+      <svg class="w-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7l0 72 0 264c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L448 147 192 223.8 192 432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L128 200l0-72c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/></svg>
+      <p class="text-xl text-white">Mets la musique !</p>
     </button>
 
-    <h2 class="text-white text-xl p-4 bg-black bg-opacity-80">Félicitations, tu as enfin fini ta thèse!</h2>
-    <p class="text-white text-xl p-4 bg-black bg-opacity-80">Mais il te reste encore l'épreuve finale pour prétendre à ton diplôme!</p>
-    <p class="text-white text-xl p-4 bg-black bg-opacity-80">Réponds à toutes les questions du COUIZE pour découvrir la surprise</p>
-    <p class="text-white text-xl p-4 bg-black bg-opacity-80">Mais attention, tu ne disposes que de 3 vies!</p>
-    <%= link_to 'Commencer le couize', questions_path, class: 'p-4 bg-[#3AFF3A]' %>
+    <div class="flex flex-col gap-4 justify-center items-center bg-black bg-opacity-90 p-4">
+      <h2 class="text-white text-2xl">Félicitations, tu as enfin fini ta thèse!</h2>
+      <p class="text-white text-xl">Mais il te reste encore l'épreuve finale pour prétendre à ton diplôme!</p>
+      <p class="text-white text-xl">Réponds à toutes les questions du COUIZE pour découvrir la surprise</p>
+      <p class="text-white text-xl">Mais attention, tu ne disposes que de 3 vies!</p>
+    </div>
+    <%= link_to questions_path, class:"flex flex-row items-center gap-2 bg-[#099F55] p-4 drop-shadow-xl" do %>
+      <svg class="w-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M192 0c-41.8 0-77.4 26.7-90.5 64L64 64C28.7 64 0 92.7 0 128L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64l-37.5 0C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM105.8 229.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L216 328.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM160 416a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
+      <p class="text-xl text-white">Commencer le COUIZE</p>
+    <% end %>
+    </div>
+
   </div>
   <%= image_tag 'luffy.webp', alt: 'Commencer le couize', class: 'w-full h-auto' %>
   <%= image_tag 'audrick_portrait.png', alt: '', class: 'audrick-head-dynamic' %>
