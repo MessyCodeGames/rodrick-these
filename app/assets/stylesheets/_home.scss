@@ -10,6 +10,8 @@ $color-gold: 	#E8A95B;
 $color-gold--highlight: #F0BB7A;
 $color-gold--shadow: #DE9945;
 
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Pacifico&family=Roboto+Slab:wght@100..900&display=swap');
+
 $background-gradient:
 radial-gradient(circle, rgba(2,148,81,1) 50%, rgba(3,79,45,1) 100%);
 
@@ -30,7 +32,9 @@ $gold-gradient:
 	);
 
 h2, h3, h4, p, a {
-  font-family: 'Titan One', sans-serif;
+  font-family: "Itim", cursive;
+  // font-weight: 400;
+  font-style: normal;
 }
 
 $shine-gradient:
@@ -210,4 +214,51 @@ body {
 			animation-timing-function: linear;
 		}
 	}
+}
+
+.audrick-head-dynamic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  animation: audrickAnimation 3s ease-in-out forwards;
+}
+
+@keyframes audrickAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+.audrick-head-static {
+  animation: audrickAnimationStatic 5s ease infinite;
+}
+
+@keyframes audrickAnimationStatic {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
 }
