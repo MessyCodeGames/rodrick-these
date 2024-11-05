@@ -109,3 +109,41 @@ $colors: $sassy, $coral, $royal, $tiffany, $peach;
     transform: translate(0px, 0px);
   }
 }
+
+.good-answer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  // animation: goodAnswerAnim 1.5s forwards;
+}
+
+@keyframes goodAnswerAnim {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(.32, 2, .55, .27);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+
+  70% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+}
+
+.show-good-answer-animation {
+  animation: goodAnswerAnim 1.5s forwards;
+}

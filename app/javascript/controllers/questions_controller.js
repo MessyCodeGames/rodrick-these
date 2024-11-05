@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="questions"
 export default class extends Controller {
-  static targets = ["radioChoice", "lives", "question"]
+  static targets = ["radioChoice", "lives", "question", "goodAnswer", "badAnswer"];
   static currentLives = 3;
   audioRight = null;
   audioWrong = null;
@@ -29,10 +29,19 @@ export default class extends Controller {
 
     if (selectedRadio) {
       const userAnswer = selectedRadio.value;
+      /* Good Answer! */
       if (userAnswer === correctAnswer) {
         console.log(`Correct answer for question ${questionNumber}: ${userAnswer}`);
 
         this.audioRight.play();
+
+        // Play the animation
+        this.goodAnswerTarget.classList.add('show-good-answer-animation');
+
+        // Remove the animation class after the animation ends
+        setTimeout(() => {
+          this.goodAnswerTarget.classList.remove('show-good-answer-animation');
+        }, 2000);
 
         const currentQuestion = button.closest('[data-questions-target="question"]');
         const nextQuestion = this.questionTargets[this.questionTargets.indexOf(currentQuestion) + 1];
@@ -45,9 +54,19 @@ export default class extends Controller {
           window.location.href = '/win';
         }
 
+      /* Bad Answer! */
       } else {
         console.log(`Incorrect answer for question ${questionNumber}. Selected: ${userAnswer}, Correct: ${correctAnswer}`);
         this.audioWrong.play();
+
+        // Play the animation
+        this.badAnswerTarget.classList.add('show-good-answer-animation');
+
+        // Remove the animation class after the animation ends
+        setTimeout(() => {
+          this.badAnswerTarget.classList.remove('show-good-answer-animation');
+        }, 2000);
+
         this.constructor.currentLives -= 1;
       }
     } else {

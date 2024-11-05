@@ -9,7 +9,7 @@
         <span class="text-5xl noob">NOOB !</span>
       </h1>
     </div>
-    <button data-action="click->siu#unMute" class="p-4 bg-[#3AFF3A] mt-4 flex flex-row items-center gap-2">
+    <button data-action="click->siu#unMute" class="p-4 bg-[#3AFF3A] mt-4 flex flex-row items-center gap-2 confettis-btn">
       <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7l0 72 0 264c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L448 147 192 223.8 192 432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L128 200l0-72c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/></svg>
       Mets le son !
     </button>
@@ -42,6 +42,8 @@
 
     <%= image_tag 'penis.png', alt:'', class:'mb-8 dick-anim origin-top-right'%>
   </div>
+  <!-- <%= image_tag 'trotinette.png', alt: '', class: 'loic-dynamic' %>
+  <%= image_tag 'trotinette.png', alt: '', class: 'loic-dynamic-right' %> -->
 </section>
 
 
@@ -62,3 +64,40 @@
 
 /* * {border: 1px red solid} */
 </style>
+
+<script>
+  const fireBtn = document.querySelector(".confettis-btn");
+
+fireBtn.addEventListener("click", () => {
+  const duration = 10 * 1000,
+    animationEnd = Date.now() + duration,
+    defaults = { startVelocity: 20, spread: 100, ticks: 15, zIndex: 0 };
+
+  function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  const interval = setInterval(function () {
+    const timeLeft = animationEnd - Date.now();
+
+    if (timeLeft <= 0) {
+      return clearInterval(interval);
+    }
+
+    const particleCount = 20 * (timeLeft / duration);
+
+    confetti(
+      Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      })
+    );
+    confetti(
+      Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.5, 0.7), y: Math.random() - 0.2 },
+      })
+    );
+  }, 250);
+});
+</script>
