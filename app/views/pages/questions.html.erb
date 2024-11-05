@@ -1,6 +1,6 @@
 <section class="h-screen flex flex-col justify-center items-center bg-questions">
 
-  <div data-controller="questions" class="flex flex-col justify-center items-center gap-8 px-8">
+  <div data-controller="questions" class="flex flex-col justify-center items-center gap-8 px-8 relative">
     <div class="">
       <p class="neon-text rotating-text" data-text="COUIZE">COUIZE</p>
     </div>
@@ -23,6 +23,8 @@
         </li>
         <% end %>
     </ul>
+    <%= image_tag 'good_answer.png', alt: '', class: 'good-answer', data: { questions_target: 'goodAnswer' } %>
+    <%= image_tag 'middle_finger.png', alt: '', class: 'good-answer', data: { questions_target: 'badAnswer' } %>
   </div>
 
 </section>
