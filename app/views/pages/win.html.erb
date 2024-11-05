@@ -42,8 +42,12 @@
       </div>
     <% end %>
 
-
-    <%= image_tag 'penis.png', alt:'', class:'drop-shadow-2xl mb-8 dick-anim origin-top-right px-8'%>
+    <div data-controller="dick" class="flex flex-col gap-4 ">
+      <p data-action="click->dick#fire" class="mx-auto text-black text-bold text-2xl p-4 bg-[#3AFF3A] mt-4 drop-shadow-xl">Dernière surprise, clique ici! </p>
+      <div data-dick-target="togglableElement" class="w-full smooth-toggle togglable-element">
+        <%= image_tag 'penis.png', alt:'', class:'drop-shadow-2xl mb-8 dick-anim origin-top-right px-8 ' %>
+      </div>
+    </div>
   </div>
   <!-- <%= image_tag 'trotinette.png', alt: '', class: 'loic-dynamic' %>
   <%= image_tag 'trotinette.png', alt: '', class: 'loic-dynamic-right' %> -->
@@ -78,7 +82,7 @@
       });
     });
   });
-  
+
   const fireBtn = document.querySelector(".confettis-btn");
 
   fireBtn.addEventListener("click", () => {
