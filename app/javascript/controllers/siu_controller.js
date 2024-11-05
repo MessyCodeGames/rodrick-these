@@ -13,7 +13,10 @@ export default class extends Controller {
 
   unMute() {
     this.siuSound.play();
-    this.siuSound.play();
-    this.leagueChampsMusic.play();
+
+    // Wait 2 seconds before playing the second sound
+    setTimeout(() => {
+      this.leagueChampsMusic.play();
+    }, 2000);
   }
 }
