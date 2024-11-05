@@ -18,25 +18,28 @@
     <p class="text-white">Bravo, clique sur les têtes pour lire les messages!</p>
 
     <% @friends.each_with_index do |friend, index| %>
-      <div class="flex w-full text-white relative">
-        <div data-controller="toggle" class="flex flex-col items-center gap-4 ">
-
-          <div class="flex peeps-anim <%= index % 2 == 0 ? 'justify-start peeps-anim' : 'justify-end peeps-anim-reverse' %>">
-            <%= image_tag friend.avatar, alt: "", class: "justify-left w-24 mt-4 h-auto rounded-full cursor-pointer ", data: { action: "click->toggle#fire" } %>
-            <% if index % 2 == 0 %>
-              <%= image_tag 'luffy_chapeau.png', alt: "", class: "w-24 h-auto absolute -top-2 rotate-12 left-6" %>
-            <% else %>
-              <%= image_tag 'luffy_chapeau.png', alt: "", class: "w-24 h-auto absolute -top-2 rotate-12 -right-6" %>
-            <% end %>
+      <div class="flex text-white relative">
+        <div data-controller="toggle" class="flex flex-col gap-4">
+          <div class="flex w-full <%= index.even? ? 'justify-start' : 'justify-end' %>">
+            <div class="flex-shrink-0 <%= index.even? ? 'peeps-anim' : 'peeps-anim-reverse' %>">
+              <%= image_tag friend.avatar, alt: "", class: "w-24 h-auto mt-4 rounded-full cursor-pointer", data: { action: "click->toggle#fire" } %>
+              <% if index.even? %>
+                <%= image_tag 'luffy_chapeau.png', alt: "", class: "w-24 h-auto absolute -top-2 rotate-12 left-6" %>
+              <% else %>
+                <%= image_tag 'luffy_chapeau.png', alt: "", class: "w-24 h-auto absolute -top-2 rotate-12 -right-6" %>
+              <% end %>
+            </div>
           </div>
 
           <div data-toggle-target="togglableElement" class="w-full smooth-toggle togglable-element text-center">
-            <p class="flex <%= index % 2 == 0 ? 'justify-start' : 'justify-end' %>"><%= friend.name %>:</p>
+            <p class="<%= index.even? ? 'text-left' : 'text-right' %>"><%= friend.name %>:</p>
             <p class="text-center"><%= friend.message %></p>
           </div>
         </div>
       </div>
     <% end %>
+
+
     <%= image_tag 'penis.png', alt:'', class:'mb-8 dick-anim origin-top-right'%>
   </div>
 </section>
