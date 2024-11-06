@@ -1,7 +1,7 @@
-<section class="flex flex-col justify-between items-center">
-  <div data-controller="siu" class="flex flex-col items-center text-center gap-8 mt-8">
+<section data-controller="siu" class="flex flex-col justify-between items-center">
+  <div class="flex flex-col items-center text-center gap-12 bg-win px-8">
     <!-- <h1>GG EASY NOOB!</h1> -->
-    <div class="text-wrapper">
+    <div class="text-wrapper mt-8">
       <h1 class="text-6xl gg drop-shadow-2xl stroke-black">BRAVO
         <span class="text-5xl noob stroke-black">DOCTEUR G.!</span>
       </h1>
@@ -17,13 +17,16 @@
       Mets le son !
     </button>
 
-    <div class="text-white flex flex-row px-8 items-center justify-center gap-1">
+    <div class="text-white flex flex-row items-center justify-center gap-1 mb-8 p-4 bg-black bg-opacity-50">
       <svg class="text-white fill-current w-16 h-16 bouncing-arrow drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM244.7 395.3l-112-112c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9l64 0 0-96c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 96 64 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-112 112c-6.2 6.2-16.4 6.2-22.6 0z"/></svg>
       <p class="text-xl">Scrolle pour voir la vidéo et les messages!</p>
       <svg class="text-white fill-current w-16 h-16 bouncing-arrow drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM244.7 395.3l-112-112c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9l64 0 0-96c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 96 64 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-112 112c-6.2 6.2-16.4 6.2-22.6 0z"/></svg>
     </div>
+  </div>
 
-    <%= video_tag 'audrick_photos_1.mp4', id: 'audrickVideo', autoplay: true, muted: true, controls: true, class: 'video' %>
+  <%= video_tag 'audrick_photos_1.mp4', id: 'audrickVideo', autoplay: true, muted: true, controls: true, class: 'video' %>
+
+  <div class="flex flex-col items-center text-center gap-8 mt-8">
 
     <div class="text-white flex flex-row px-8 items-center justify-center gap-1">
       <svg class="text-white fill-current w-16 h-16 bouncing-arrow drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM244.7 395.3l-112-112c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9l64 0 0-96c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 96 64 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-112 112c-6.2 6.2-16.4 6.2-22.6 0z"/></svg>
