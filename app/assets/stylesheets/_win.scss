@@ -107,8 +107,18 @@
           drop-shadow(0 0 30px rgba(255, 255, 255, 0.4));
 }
 
+.bouncing-arrow {
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
 
-
-* {
-  // border: 1px red solid;
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Ease out */
+  }
+  50% {
+    transform: translateY(10px) scale(1.1, 0.9); /* Move up and squeeze */
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Ease in */
+  }
 }
