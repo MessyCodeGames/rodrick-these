@@ -2,11 +2,11 @@
   <div data-controller="siu" class="flex flex-col items-center text-center gap-8 mt-8">
     <!-- <h1>GG EASY NOOB!</h1> -->
     <div class="text-wrapper">
-      <h1 class="text-6xl gg drop-shadow-2xl stroke-black">GG EASY
-        <span class="text-5xl noob stroke-black">NOOB !</span>
+      <h1 class="text-6xl gg drop-shadow-2xl stroke-black">BRAVO
+        <span class="text-5xl noob stroke-black">DOCTEUR G.!</span>
       </h1>
-      <h1 class="text-6xl gg drop-shadow-2xl">GG EASY
-        <span class="text-5xl noob">NOOB !</span>
+      <h1 class="text-6xl gg drop-shadow-2xl">BRAVO
+        <span class="text-5xl noob">DOCTEUR G.!</span>
       </h1>
     </div>
     <button data-action="click->siu#unMute" class="p-4 bg-[#3AFF3A] mt-4 flex flex-row items-center gap-2 confettis-btn rounded-3xl text-xl drop-shadow-xl">
@@ -18,7 +18,7 @@
 
     <p clas="text-white">(En dessous futur montage vidéo)</p>
     <img src="https://www.shutterstock.com/image-vector/bravo-lettering-vector-text-banner-600nw-1598877403.jpg" alt="" class="">
-    <p class="text-white text-xl px-8">Bravo! Clique sur les têtes pour lire les messages!</p>
+    <p class="text-white text-xl px-8">Bravo! Clique sur les bouilles pour lire les messages!</p>
 
     <% @friends.each_with_index do |friend, index| %>
       <div class="flex text-white relative px-8">
@@ -27,9 +27,9 @@
             <div class="peeps drop-shadow-xl flex-shrink-0 <%= index.even? ? 'peeps-anim' : 'peeps-anim-reverse' %>">
               <%= image_tag friend.avatar, alt: "", class: "w-24 h-auto mt-4 rounded-full cursor-pointer", data: { action: "click->toggle#fire" } %>
               <% if index.even? %>
-                <%= image_tag 'luffy_chapeau.png', alt: "", class: "w-24 h-auto absolute -top-2 rotate-12 left-6" %>
+                <%= image_tag 'luffy_chapeau.png', alt: "", class: "w-24 h-auto absolute -top-2 rotate-12 left-3" %>
               <% else %>
-                <%= image_tag 'luffy_chapeau.png', alt: "", class: "w-24 h-auto absolute -top-2 rotate-12 -right-6" %>
+                <%= image_tag 'luffy_chapeau.png', alt: "", class: "w-24 h-auto absolute -top-2 rotate-12 -right-3" %>
               <% end %>
             </div>
           </div>

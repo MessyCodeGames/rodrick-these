@@ -1,19 +1,19 @@
 <section class="h-dvh flex flex-col justify-center items-center bg-questions">
 
-  <div data-controller="questions" class="flex flex-col justify-center items-center gap-8 px-8 relative">
-    <div class="">
+  <div data-controller="questions" class="flex flex-col justify-center items-center gap-4 px-8 relative">
+    <div class="flex flex-row items-center justify-center">
       <p class="neon-text rotating-text" data-text="COUIZE">COUIZE</p>
     </div>
     <p class="text-white p-4 bg-black bg-opacity-80 text-xl" data-questions-target="lives">Nombre de vies: 3</p>
-    <ul class="text-white gap-8 flex flex-col justify-center items-center text-center">
+    <ul class="text-white flex flex-col justify-center items-center text-center">
       <% @questions.each_with_index do |question, index| %>
         <li data-questions-target="question" class="<%= 'hidden' if index > 0 %> p-4 bg-black bg-opacity-80">
-          <p class="mb-8 p-4 bg-black bg-opacity-80 text-xl">Question N°<%= question.number %>/<%= @questions.all.length %></p>
-          <h4 class="text-xl"><%= question.question %></h4>
+          <p class="mb-8 p-4 bg-black bg-opacity-80 text-xl">Question N°<%= question.number %>/<%= (@questions.all.length - 1) %></p>
+          <h4 class="text-xl pb-4"><%= simple_format(question.question) %></h4>
           <ul>
             <% question.answers.each do |answer| %>
-              <li class="py-4">
-                <label class="text-xl">
+              <li class="py-2">
+                <label class="text-base">
                   <input data-questions-target="radioChoice" type="radio" name="question<%= question.number %>" value="<%= answer %>"/><%= answer %>
                 </label>
               </li>
@@ -28,3 +28,7 @@
   </div>
 
 </section>
+
+<style>
+/* * {border: 1px red solid} */
+</style>
