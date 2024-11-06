@@ -109,67 +109,67 @@ puts 'Destroying questions and games'
   puts 'Creating the friends'
   Friend.create!(
     name: "Sonic",
-    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    avatar: ActionController::Base.helpers.asset_path('avatars/sonic_2.png'),
+    message: "Mon p'tit Gibert, toutes mes félicitations! C'est avec émotion que je te souhaite le meilleur pour la suite DOCTEUR GIBERT! Tu as assuré comme un boss! Je suis contente d'avoir fait ta connaissance! Merci pour tous les moments de rigolades et de soutien dans les moments plus difficiles! Je n'oublie pas non plus notre trio infernal avec Robine! La bise bro! So. PS: tu ne veux pas nous pondre un modèle nous permettant de sélectionner de vrais joueurs pour le prochain mercato de l'ASSE? Mdr"
   )
 
   Friend.create!(
     name: "Robin",
-    avatar: ActionController::Base.helpers.asset_path('avatars/robin.jpg'),
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    avatar: ActionController::Base.helpers.asset_path('avatars/robin_2.png'),
+    message: "P'tain je vais plus pouvoir t'appeler Mr. Jacky, ça va être Docteur Jacky maintenant n*****, ça va me faire bizarre! Fiou en fouillant les photos j'ai réalisé que ça commençait à faire un bout de temps qu'on se connait finalement, tu commences presque à prendre un peu de barbe! En tout cas, chapeau bas c'était de la frappe cette thèse kouhya, la mif du sang, aura +1000 ou un truc du genre je te vois moins alors je suis plus à jour sur les nouvelles expressions! PS: V'la téma la twingo. Je rajoute en plus une phrase pour que mon commentaire soit plus long que celui de Sonic."
   )
 
   Friend.create!(
     name: "Valentina",
-    avatar: ActionController::Base.helpers.asset_path('avatars/valentina.jpg'),
+    avatar: ActionController::Base.helpers.asset_path('avatars/valentina.png'),
     message: "Lorem ipsum dolor sit amet, consectetur et dolore magna aliqua. Ut enim ad minim veniam"
   )
 
   Friend.create!(
     name: "Edouard",
-    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    avatar: ActionController::Base.helpers.asset_path('avatars/edouard.png'),
     message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
   )
 
   Friend.create!(
     name: "Laurie",
-    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    avatar: ActionController::Base.helpers.asset_path('avatars/laurie.png'),
     message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
   )
 
   Friend.create!(
     name: "Louise",
-    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    avatar: ActionController::Base.helpers.asset_path('avatars/louise.png'),
     message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
   )
 
   Friend.create!(
     name: "Ludovic",
-    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    avatar: ActionController::Base.helpers.asset_path('avatars/ludo.png'),
     message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
   )
 
   Friend.create!(
     name: "Olivier",
-    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    avatar: ActionController::Base.helpers.asset_path('avatars/olive.png'),
     message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
   )
 
   Friend.create!(
     name: "Victoire",
-    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    avatar: ActionController::Base.helpers.asset_path('avatars/vic.png'),
     message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
   )
 
   Friend.create!(
     name: "Valérie",
-    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    avatar: ActionController::Base.helpers.asset_path('avatars/val.png'),
     message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
   )
 
   Friend.create!(
     name: "Lucille",
-    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    avatar: ActionController::Base.helpers.asset_path('avatars/lucille.png'),
     message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
   )
   puts 'game created'
