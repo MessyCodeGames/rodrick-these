@@ -14,7 +14,7 @@
             <% question.answers.each do |answer| %>
               <li class="py-2">
                 <label class="text-base">
-                  <input data-questions-target="radioChoice" type="radio" name="question<%= question.number %>" value="<%= answer %>"/><%= answer %>
+                  <input data-questions-target="radioChoice" class="mr-2" type="radio" name="question<%= question.number %>" value="<%= answer %>"/><%= answer %>
                 </label>
               </li>
             <% end %>
