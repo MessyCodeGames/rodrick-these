@@ -45,6 +45,55 @@ puts 'Destroying questions and games'
 
   Question.create!(
     number: 4,
+    question: "Placeholder en attente: quelle est la 1ère réponse?",
+    answers: ["1", "2", "3", "4"],
+    answer: "1"
+  )
+
+  Question.create!(
+    number: 5,
+    question: "Placeholder en attente: quelle est la 1ère réponse?",
+    answers: ["1", "2", "3", "4"],
+    answer: "1"
+  )
+
+  Question.create!(
+    number: 6,
+    question: "Placeholder en attente: quelle est la 1ère réponse?",
+    answers: ["1", "2", "3", "4"],
+    answer: "1"
+  )
+
+  Question.create!(
+    number: 7,
+    question: "Placeholder en attente: quelle est la 1ère réponse?",
+    answers: ["1", "2", "3", "4"],
+    answer: "1"
+  )
+
+  Question.create!(
+    number: 8,
+    question: "Placeholder en attente: quelle est la 1ère réponse?",
+    answers: ["1", "2", "3", "4"],
+    answer: "1"
+  )
+
+  Question.create!(
+    number: 9,
+    question: "Placeholder en attente: quelle est la 1ère réponse?",
+    answers: ["1", "2", "3", "4"],
+    answer: "1"
+  )
+
+  Question.create!(
+    number: 10,
+    question: "Placeholder en attente: quelle est la 1ère réponse?",
+    answers: ["1", "2", "3", "4"],
+    answer: "1"
+  )
+
+  Question.create!(
+    number: 11,
     question: "Question bonus : Quelle est la VRAIE capitale de la France ?",
     answers: ["Caen", "Paris", "Saint-Etienne"],
     answer: "Saint-Etienne"

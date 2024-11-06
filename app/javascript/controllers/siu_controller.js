@@ -17,6 +17,6 @@ export default class extends Controller {
     // Wait 2 seconds before playing the second sound
     setTimeout(() => {
       this.leagueChampsMusic.play();
-    }, 2000);
+    }, 1300);
   }
 }
