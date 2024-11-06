@@ -116,6 +116,7 @@ $colors: $sassy, $coral, $royal, $tiffany, $peach;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
+  z-index:100;
   // animation: goodAnswerAnim 1.5s forwards;
 }
 

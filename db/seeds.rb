@@ -17,30 +17,37 @@ puts 'Destroying questions and games'
   puts 'Creating the questions'
   Question.create!(
     number: 1,
-    question: "Quelle est la capitale de la France ?",
-    answers: ["Paris", "Lyon", "Marseille", "Toulouse"],
-    answer: "Paris"
+    question: "Argot Stéphanois, que signifie 'badinguet' ?",
+    answers: ["Tablier (en cuir) de femme", "Doigt de pied", "Attardé, simple d’esprit", "Personne qui parle à tort et à travers"],
+    answer: "Attardé, simple d’esprit"
   )
 
   Question.create!(
     number: 2,
-    question: "Quelle est la capitale de l'Espagne ?",
-    answers: ["Madrid", "Barcelone", "Valence", "Séville"],
-    answer: "Madrid"
+    answers: ["9", "6", "10", "15"],
+    answer: "6",
+    question: <<-QUESTION
+      Quelle est le résultat du code R suivant? \n
+      sum_values <- 0\n
+      for(i in 1:5) {\n
+        if(i %% 2 == 0) { sum_values <- sum_values + i }\n
+      }\n
+      sum_values
+    QUESTION
   )
 
   Question.create!(
     number: 3,
-    question: "Quelle est la capitale de l'Allemagne ?",
-    answers: ["Berlin", "Munich", "Hambourg", "Francfort"],
-    answer: "Berlin"
+    question: "En quelle année la ville de Saint-Étienne a-t-elle été fondée ?",
+    answers: ["476", "1150", "1285", "1536"],
+    answer: "1150"
   )
 
   Question.create!(
     number: 4,
-    question: "Quelle est la capitale de l'Italie ?",
-    answers: ["Rome", "Milan", "Naples", "Turin"],
-    answer: "Rome"
+    question: "Question bonus : Quelle est la VRAIE capitale de la France ?",
+    answers: ["Lyon", "Paris", "Saint-Etienne", "Marseille"],
+    answer: "Saint-Etienne"
   )
   puts "All questions have been added to the database"
 
@@ -54,24 +61,66 @@ puts 'Destroying questions and games'
   Friend.create!(
     name: "Sonic",
     avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
-    message: "Tu pues la merde! Tu pues la merde! Tu pues la merde! Tu pues la merde! Tu pues la merde! Tu pues la merde! Tu pues la merde! Tu pues la merde!"
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
   )
 
   Friend.create!(
     name: "Robin",
     avatar: ActionController::Base.helpers.asset_path('avatars/robin.jpg'),
-    message: "Tu pues la crotte! Tu pues la crotte! Tu pues la crotte! Tu pues la pisse!"
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et dolore magna aliqua. Ut enim ad minim veniam"
   )
 
   Friend.create!(
-    name: "Olivier",
+    name: "Valentina",
     avatar: ActionController::Base.helpers.asset_path('avatars/valentina.jpg'),
-    message: "Tu pues la pisse! Tu pues la pisse! Tu pues la pisse!"
+    message: "Lorem ipsum dolor sit amet, consectetur et dolore magna aliqua. Ut enim ad minim veniam"
   )
 
   Friend.create!(
     name: "Edouard",
     avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
-    message: "Tu pues le vomi! Tu pues la pisse! Tu pues la pisse!"
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+  )
+
+  Friend.create!(
+    name: "Laurie",
+    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+  )
+
+  Friend.create!(
+    name: "Louise",
+    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+  )
+
+  Friend.create!(
+    name: "Ludovic",
+    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+  )
+
+  Friend.create!(
+    name: "Olivier",
+    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+  )
+
+  Friend.create!(
+    name: "Victoire",
+    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+  )
+
+  Friend.create!(
+    name: "Valérie",
+    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+  )
+
+  Friend.create!(
+    name: "Lucille",
+    avatar: ActionController::Base.helpers.asset_path('avatars/sonic.jpg'),
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
   )
   puts 'game created'
