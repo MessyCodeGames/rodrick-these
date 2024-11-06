@@ -15,9 +15,7 @@
     </button>
 
     <%= image_tag 'echarpe_asse.png', alt:'', class:'scarf-anim drop-shadow-xl px-8'%>
-
-    <p clas="text-white">(En dessous futur montage vidéo)</p>
-    <img src="https://www.shutterstock.com/image-vector/bravo-lettering-vector-text-banner-600nw-1598877403.jpg" alt="" class="">
+    <%= video_tag 'audrick_photos_1.mp4', id: 'audrickVideo', autoplay: true, controls: true, class: 'your-video-class' %>
     <p class="text-white text-xl px-8">Bravo! Clique sur les bouilles pour lire les messages!</p>
 
     <% @friends.each_with_index do |friend, index| %>
