@@ -74,6 +74,13 @@ export default class extends Controller {
     }
     console.log(`Current lives: ${this.constructor.currentLives}`);
     this.livesTarget.innerText = `Nombre de vies: ${this.constructor.currentLives}`;
+    if (this.constructor.currentLives === 2) {
+      this.livesTarget.classList.remove('text-[#08FF08]');
+      this.livesTarget.classList.add('text-[#F7F700]');
+    } else if (this.constructor.currentLives < 2) {
+      this.livesTarget.classList.remove('text-[#F7F700]');
+      this.livesTarget.classList.add('text-[#F60002]');
+    } 
 
     // Check if lives are zero and redirect to game over path
     if (this.constructor.currentLives < 0) {
