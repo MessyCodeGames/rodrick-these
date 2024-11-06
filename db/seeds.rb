@@ -46,7 +46,7 @@ puts 'Destroying questions and games'
   Question.create!(
     number: 4,
     question: "Question bonus : Quelle est la VRAIE capitale de la France ?",
-    answers: ["Lyon", "Paris", "Saint-Etienne", "Marseille"],
+    answers: ["Caen", "Paris", "Saint-Etienne"],
     answer: "Saint-Etienne"
   )
   puts "All questions have been added to the database"
