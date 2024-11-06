@@ -9,14 +9,27 @@
         <span class="text-5xl noob">DOCTEUR G.!</span>
       </h1>
     </div>
+
+    <%= image_tag 'echarpe_asse.png', alt:'', class:'scarf-anim drop-shadow-xl px-8'%>
+
     <button data-action="click->siu#unMute" class="p-4 bg-[#3AFF3A] mt-4 flex flex-row items-center gap-2 confettis-btn rounded-3xl text-xl drop-shadow-xl">
       <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7l0 72 0 264c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L448 147 192 223.8 192 432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L128 200l0-72c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/></svg>
       Mets le son !
     </button>
 
-    <%= image_tag 'echarpe_asse.png', alt:'', class:'scarf-anim drop-shadow-xl px-8'%>
-    <%= video_tag 'audrick_photos_1.mp4', id: 'audrickVideo', autoplay: true, controls: true, class: 'your-video-class' %>
-    <p class="text-white text-xl px-8">Bravo! Clique sur les bouilles pour lire les messages!</p>
+    <div class="text-white flex flex-row px-8 items-center justify-center gap-1">
+      <svg class="text-white fill-current w-16 h-16 bouncing-arrow drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM244.7 395.3l-112-112c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9l64 0 0-96c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 96 64 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-112 112c-6.2 6.2-16.4 6.2-22.6 0z"/></svg>
+      <p class="text-xl">Scrolle pour voir la vidéo et les messages!</p>
+      <svg class="text-white fill-current w-16 h-16 bouncing-arrow drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM244.7 395.3l-112-112c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9l64 0 0-96c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 96 64 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-112 112c-6.2 6.2-16.4 6.2-22.6 0z"/></svg>
+    </div>
+
+    <%= video_tag 'audrick_photos_1.mp4', id: 'audrickVideo', autoplay: true, muted: true, controls: true, class: 'video' %>
+
+    <div class="text-white flex flex-row px-8 items-center justify-center gap-1">
+      <svg class="text-white fill-current w-16 h-16 bouncing-arrow drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM244.7 395.3l-112-112c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9l64 0 0-96c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 96 64 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-112 112c-6.2 6.2-16.4 6.2-22.6 0z"/></svg>
+      <p class="text-xl">GG easy! Clique sur les bouilles pour lire les messages!</p>
+      <svg class="text-white fill-current w-16 h-16 bouncing-arrow drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM244.7 395.3l-112-112c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9l64 0 0-96c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 96 64 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-112 112c-6.2 6.2-16.4 6.2-22.6 0z"/></svg>
+    </div>
 
     <% @friends.each_with_index do |friend, index| %>
       <div class="flex text-white relative px-8">
@@ -40,7 +53,13 @@
       </div>
     <% end %>
 
-    <div data-controller="dick" class="flex flex-col gap-4 ">
+    <div class="text-white flex flex-row px-8 items-center justify-center gap-1">
+      <svg class="text-white fill-current w-12 h-12 bouncing-arrow drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM244.7 395.3l-112-112c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9l64 0 0-96c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 96 64 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-112 112c-6.2 6.2-16.4 6.2-22.6 0z"/></svg>
+      <p class="text-xl">Scrolle encore un peu!</p>
+      <svg class="text-white fill-current w-12 h-12 bouncing-arrow drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM244.7 395.3l-112-112c-4.6-4.6-5.9-11.5-3.5-17.4s8.3-9.9 14.8-9.9l64 0 0-96c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 96 64 0c6.5 0 12.3 3.9 14.8 9.9s1.1 12.9-3.5 17.4l-112 112c-6.2 6.2-16.4 6.2-22.6 0z"/></svg>
+    </div>
+
+    <div data-controller="dick" class="flex flex-col gap-4">
       <p data-action="click->dick#fire" class="mx-auto text-black text-bold text-2xl p-4 bg-[#3AFF3A] mt-4 drop-shadow-xl">Dernière surprise, clique ici! </p>
       <div data-dick-target="togglableElement" class="w-full smooth-toggle togglable-element">
         <%= image_tag 'penis.png', alt:'', class:'drop-shadow-2xl mb-8 dick-anim origin-top-right px-8 ' %>
@@ -84,7 +103,7 @@
   const fireBtn = document.querySelector(".confettis-btn");
 
   fireBtn.addEventListener("click", () => {
-    const duration = 15 * 1000,
+    const duration = 30 * 1000,
       animationEnd = Date.now() + duration,
       defaults = { startVelocity: 20, spread: 100, ticks: 15, zIndex: 0 };
 
