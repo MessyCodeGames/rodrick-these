@@ -6,7 +6,7 @@ export default class extends Controller {
   static targets = ["togglableElement"]
 
   connect() {
-    console.log("Dick controller is well connected")
+    // console.log("Dick controller is well connected")
   }
 
   fire() {

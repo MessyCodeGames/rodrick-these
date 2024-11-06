@@ -6,7 +6,7 @@ export default class extends Controller {
   leagueChampsMusic = null;
 
   connect() {
-    console.log("win page music controller reporting for duty");
+    // console.log("win page music controller reporting for duty");
     this.siuSound = new Audio("/assets/siu.mp3");
     this.leagueChampsMusic = new Audio("/assets/i_will_survive.m4a");
   };

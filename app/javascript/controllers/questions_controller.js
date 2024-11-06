@@ -6,11 +6,13 @@ export default class extends Controller {
   static currentLives = 3;
   audioRight = null;
   audioWrong = null;
+  ambianceMusic = null
 
   connect() {
-    console.log("Hello, this is the questions controller")
+    // console.log("Hello, this is the questions controller")
     this.audioRight = new Audio("/assets/zelda_chime.mp3");
     this.audioWrong = new Audio("/assets/wrong_buzzer.mp3");
+    this.ambianceMusic = new Audio("/assets/questions_music.m4a");
   }
 
   checkAnswer(event) {
@@ -20,7 +22,7 @@ export default class extends Controller {
     const radioInput = questionElement.querySelector('input[type="radio"]:checked');
 
     if (!radioInput) {
-      console.log(`No answer selected for question`);
+      // console.log(`No answer selected for question`);
       return;
     }
 
@@ -31,7 +33,7 @@ export default class extends Controller {
       const userAnswer = selectedRadio.value;
       /* Good Answer! */
       if (userAnswer === correctAnswer) {
-        console.log(`Correct answer for question ${questionNumber}: ${userAnswer}`);
+        // console.log(`Correct answer for question ${questionNumber}: ${userAnswer}`);
 
         this.audioRight.play();
 
@@ -56,7 +58,7 @@ export default class extends Controller {
 
       /* Bad Answer! */
       } else {
-        console.log(`Incorrect answer for question ${questionNumber}. Selected: ${userAnswer}, Correct: ${correctAnswer}`);
+        // console.log(`Incorrect answer for question ${questionNumber}. Selected: ${userAnswer}, Correct: ${correctAnswer}`);
         this.audioWrong.play();
 
         // Play the animation
@@ -70,9 +72,9 @@ export default class extends Controller {
         this.constructor.currentLives -= 1;
       }
     } else {
-      console.log(`No answer selected for question ${questionNumber}`);
+      // console.log(`No answer selected for question ${questionNumber}`);
     }
-    console.log(`Current lives: ${this.constructor.currentLives}`);
+    // console.log(`Current lives: ${this.constructor.currentLives}`);
     this.livesTarget.innerText = `Nombre de vies: ${this.constructor.currentLives}`;
     if (this.constructor.currentLives === 2) {
       this.livesTarget.classList.remove('text-[#08FF08]');
@@ -80,11 +82,16 @@ export default class extends Controller {
     } else if (this.constructor.currentLives < 2) {
       this.livesTarget.classList.remove('text-[#F7F700]');
       this.livesTarget.classList.add('text-[#F60002]');
-    } 
+    }
 
     // Check if lives are zero and redirect to game over path
     if (this.constructor.currentLives < 0) {
       window.location.href = '/game_over';
     }
+  }
+
+  playMusic() {
+    this.ambianceMusic.loop = true;
+    this.ambianceMusic.play();
   }
 }

@@ -4,7 +4,13 @@
     <div class="flex flex-row items-center justify-center">
       <p class="neon-text rotating-text" data-text="COUIZE">COUIZE</p>
     </div>
-    <p class="text-[#08FF08] p-4 bg-black bg-opacity-80 text-xl" data-questions-target="lives">Nombre de vies: 3</p>
+    <div class="flex flex-row items-center justify-center gap-2">
+      <div data-action="click->questions#playMusic" class="p-4 bg-[#3AFF3A] rounded-full drop-shadow-xl flex justify-center items-center">
+        <svg class="" fill="currentColor" height="26" viewBox="0 0 16 16" width="26" xmlns="http://www.w3.org/2000/svg"><path d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2z"/><path d="M9 3v10H8V3h1z" fill-rule="evenodd"/><path d="M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5V2.82z"/></svg>
+      </div>
+      <p class="text-[#08FF08] p-4 bg-black bg-opacity-80 text-xl" data-questions-target="lives">Nombre de vies: 3</p>
+    </div>
+
     <ul class="text-white flex flex-col justify-center items-center text-center">
       <% @questions.each_with_index do |question, index| %>
         <li data-questions-target="question" class="<%= 'hidden' if index > 0 %> p-4 bg-black bg-opacity-80">
