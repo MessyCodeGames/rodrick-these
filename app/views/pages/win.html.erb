@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  <%= video_tag 'audrick_photos_1.mp4', id: 'audrickVideo', autoplay: false, muted: true, controls: true, class: 'video' %>
+  <%= video_tag 'Audrick_these_V2.mp4', id: 'audrickVideo', autoplay: false, muted: true, controls: true, class: 'video' %>
 
   <div class="flex flex-col items-center text-center gap-8 mt-8">
 
@@ -50,7 +50,7 @@
 
           <div data-toggle-target="togglableElement" class="w-full smooth-toggle togglable-element text-center">
             <p class="text-2xl font-bold <%= index.even? ? 'text-left' : 'text-right' %> "><%= friend.name %>:</p>
-            <p class="shadow-2xl text-xl text-center bg-[#FFC510] text-black p-4 rounded-xl"><%= friend.message %></p>
+            <p class="shadow-2xl text-xl text-left bg-[#FFC510] text-black p-4 rounded-xl"><%= friend.message %></p>
           </div>
         </div>
       </div>
