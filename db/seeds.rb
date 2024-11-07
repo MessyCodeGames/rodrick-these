@@ -17,7 +17,7 @@ puts 'Destroying questions and games'
   puts 'Creating the questions'
   Question.create!(
     number: 1,
-    question: "Argot Stéphanois, que signifie 'badinguet' ?",
+    question: "Parler gaga; que signifie 'badinguet' ?",
     answers: ["Tablier (en cuir) de femme", "Doigt de pied", "Attardé, simple d’esprit", "Personne qui parle à tort et à travers"],
     answer: "Attardé, simple d’esprit"
   )
