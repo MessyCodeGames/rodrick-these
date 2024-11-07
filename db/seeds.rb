@@ -45,30 +45,30 @@ puts 'Destroying questions and games'
 
   Question.create!(
     number: 4,
-    question: "Placeholder en attente: quelle est la 1ère réponse?",
-    answers: ["1", "2", "3", "4"],
-    answer: "1"
+    question: "Quel est le seul acronyme juste ?",
+    answers: ['PHRC : Protocole Hospitalier de Recherche Clinique', 'COCORC : COmité de COntrôle de la Recherche Clinique', 'RIPH : Recherches Impliquant la Personne Humaine', 'DRCI : Direction de la Recherche Clinique et de l’Innovation'],
+    answer: 'RIPH : Recherches Impliquant la Personne Humaine'
   )
 
   Question.create!(
     number: 5,
-    question: "Placeholder en attente: quelle est la 1ère réponse?",
-    answers: ["1", "2", "3", "4"],
-    answer: "1"
+    question: "Lors de la révolution française, St-Etienne a changé de nom, lequel ?",
+    answers: ['Martigny-le-Peuple', 'C’est faux, St-Etienne n’a jamais changé de nom, c’est nimp !', 'Bucy-la-République', 'Armeville'],
+    answer: 'Armeville'
   )
 
   Question.create!(
     number: 6,
-    question: "Placeholder en attente: quelle est la 1ère réponse?",
-    answers: ["1", "2", "3", "4"],
-    answer: "1"
+    question: "En 1970, l’ASSE choisit de mettre sur son logo une panthère noire en hommage à...",
+    answers: [' Moussa Dembélé ', 'Salif Keita', ' Aymé Kountchou ', ' Abdoulaye Sarr '],
+    answer: 'Salif Keita'
   )
 
   Question.create!(
     number: 7,
-    question: "Placeholder en attente: quelle est la 1ère réponse?",
-    answers: ["1", "2", "3", "4"],
-    answer: "1"
+    question: "Quel est le nom du fruit du démon de Trafalgar D. Law ?",
+    answers: ['Ope Ope no Mi', 'Hie Hie no Mi', 'Gura Gura no Mi', 'Mera Mera no Mi'],
+    answer: 'Ope Ope no Mi'
   )
 
   Question.create!(
