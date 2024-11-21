@@ -7,7 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-puts 'Destroying questions and games'
+puts 'Destroying questions, friends and games'
   Question.destroy_all
   Game.destroy_all
   Friend.destroy_all
@@ -144,9 +144,9 @@ puts 'Destroying questions and games'
   )
 
   Friend.create!(
-    name: "Ludovic",
+    name: "Ludo",
     avatar: ActionController::Base.helpers.asset_path('avatars/ludo.png'),
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+    message: "Ça y est Dr Gibert! Quel beau parcours depuis notre année en M2 ensemble 😎. Je garde que les bons souvenirs de cette année avec toute la clique !!! On se retrouvera pour faire une soirée limbo tous ensemble. Congratulations, et je te souhaite que du bonheur!"
   )
 
   Friend.create!(
