@@ -152,7 +152,7 @@ puts 'Destroying questions, friends and games'
   Friend.create!(
     name: "Olivier",
     avatar: ActionController::Base.helpers.asset_path('avatars/olive.png'),
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+    message: "Au jour d'aujourd'hui 😂, te voici enfin Docteur! Il était temps! Bravo pour cette belle réussite malgré les embûches (souvent rencontrées dans des salles de foot), des collègues qui ne comprennent rien au codage et une ASSE qui descend puis qui remonte... C'était pas facile mais tu l'as fait! Toutes mes félicitations. Bien amicalement. Olivier."
   )
 
   Friend.create!(
