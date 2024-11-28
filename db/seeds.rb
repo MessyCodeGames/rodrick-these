@@ -164,7 +164,7 @@ puts 'Destroying questions, friends and games'
   Friend.create!(
     name: "Valérie",
     avatar: ActionController::Base.helpers.asset_path('avatars/val.png'),
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+    message: "Audrick, juste quelques mots pour t'envoyer toutes mes féliciations! Te voilà à présent l'heureux titulaire d'un doctorat! Tu as beaucoup de mérite car je sais que cela n'a pas été tous les jours facile pour toi. Tu as su t'accrocher, persévérer et grâce à ta volonté, tu as obtenu ce pour quoi tu avais tant travaillé! Je te souhaite de continuer ta route dans cet état d'esprit et plein de réussites à l'avenir pour t'envoler vers la route des succès. Bon courage pour la suite et encore toutes mes félicitations. Bisous."
   )
 
   Friend.create!(
