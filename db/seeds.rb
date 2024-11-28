@@ -73,9 +73,9 @@ puts 'Destroying questions, friends and games'
 
   Question.create!(
     number: 8,
-    question: "Placeholder en attente: quelle est la 1ère réponse?",
-    answers: ["1", "2", "3", "4"],
-    answer: "1"
+    question: "Quelle est la nationalité officielle de Victoire ta moitié?",
+    answers: ["Russe", "Franco-Russe", "Biélorusse", "Française", "Franco-Biélorusse"],
+    answer: "Française"
   )
 
   Question.create!(
@@ -87,9 +87,9 @@ puts 'Destroying questions, friends and games'
 
   Question.create!(
     number: 10,
-    question: "Placeholder en attente: quelle est la 1ère réponse?",
-    answers: ["1", "2", "3", "4"],
-    answer: "1"
+    question: "Quel est le vrai prénom de Victoire?",
+    answers: ["Yelisaveta", "Adelina", "Svetlana", "Yéléna"],
+    answer: "Yelisaveta"
   )
 
   Question.create!(
