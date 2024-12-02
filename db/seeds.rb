@@ -88,7 +88,7 @@ puts 'Destroying questions, friends and games'
   Question.create!(
     number: 10,
     question: "Quel est le vrai prénom de Victoire?",
-    answers: ["Yelisaveta", "Adelina", "Svetlana", "Yéléna"],
+    answers: ["Yelisaveta", "Adelina", "Svetlana", "Smislova"],
     answer: "Yelisaveta"
   )
 
@@ -128,7 +128,7 @@ puts 'Destroying questions, friends and games'
   Friend.create!(
     name: "Edouard",
     avatar: ActionController::Base.helpers.asset_path('avatars/edouard.png'),
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+    message: "Salut Jacky, te voilà enfin docteur! Félicitations! Finit les coups de batte de baseball (en mousse) ou les béquilles dans l'entrejambe! A toi la vie d'adulte, un post doc auquel tu pourras venir en trottiinette avec un casque sur la tête (sinon Emilie déchirera ton contrat)! Profite bien de cette période post thèse, c'est super de passer sa journée à jouer aux jeux vidéo et à regarder des animés ;-) !"
   )
 
   Friend.create!(
@@ -170,6 +170,6 @@ puts 'Destroying questions, friends and games'
   Friend.create!(
     name: "Lucille",
     avatar: ActionController::Base.helpers.asset_path('avatars/lucille.png'),
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+    message: "Félicitations pour cette thèse! Je suis très contente d'avoir eu la chance de croiser ton chemin (comme quoi le labo de Saint-Etienne aura eu des points positifs 😉) et que tu sois arrivé à avoir une très belle thèse! Tu le mérites! Je te souhaite pleins de belles choses pour la suite autant côté professionnel que personnel! Pleins de bisous et à bientôt j'espère!"
   )
   puts 'game created'
