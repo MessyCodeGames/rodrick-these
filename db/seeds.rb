@@ -88,7 +88,7 @@ puts 'Destroying questions, friends and games'
   Question.create!(
     number: 10,
     question: "Quel est le vrai prénom de Victoire?",
-    answers: ["Yelisaveta", "Adelina", "Svetlana", "Yéléna"],
+    answers: ["Yelisaveta", "Adelina", "Svetlana", "Smislova"],
     answer: "Yelisaveta"
   )
 
@@ -122,25 +122,25 @@ puts 'Destroying questions, friends and games'
   Friend.create!(
     name: "Valentina",
     avatar: ActionController::Base.helpers.asset_path('avatars/valentina.png'),
-    message: "Lorem ipsum dolor sit amet, consectetur et dolore magna aliqua. Ut enim ad minim veniam"
+    message: "Félicitatiooooooooooooons mon Audrick. A l'habitude on préfère les taquineries plutôt que les compliments mais je pense que c'est le meilleur moment pour une jolie exception. Alors bravo pour tout, en particulier pour avoir survécu au coup de batte d'Edouard, il faut le souligner, bravo pour ce joli parcours. Et puis surtout merci, chaque moment à te cotoyer a été un vrai plaisir que ce soit au travail ou en dehors, merci d'être ce garçon gentil et blagueur. Tu es quelqu'un de terriblement bien, et j'ai la chance de te compter parmi mes amis. J'espère qu'il y aura plein d'autres projets en commun. Maintenant profite, kiffe parce que ça passe vite. Encore un grand bravo. Allez les verts (il fallait le placer bien sûr). Coeur sur toi."
   )
 
   Friend.create!(
     name: "Edouard",
     avatar: ActionController::Base.helpers.asset_path('avatars/edouard.png'),
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+    message: "Salut Jacky, te voilà enfin docteur! Félicitations! Fini les coups de batte de baseball (en mousse) ou les béquilles dans l'entrejambe! A toi la vie d'adulte, un post doc auquel tu pourras venir en trottinette avec un casque sur la tête (sinon Emilie déchirera ton contrat)! Profite bien de cette période post thèse, c'est super de passer sa journée à jouer aux jeux vidéo et à regarder des animés ;-) !"
   )
 
   Friend.create!(
     name: "Laurie",
     avatar: ActionController::Base.helpers.asset_path('avatars/laurie.png'),
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+    message: "Félicitations Dr. Gibert! Chapeau bas pour avoir passé 3 années à coder et recoder, mais te voilà maintenant Docteur et, sans aucun doute, prêt à conquérir le monde de la modélisation! Je te souhaite le meilleur pour la suite! PS: j'attends toujours mon dico du gaga stéphanois depuis novembre 2021..."
   )
 
   Friend.create!(
     name: "Louise",
     avatar: ActionController::Base.helpers.asset_path('avatars/louise.png'),
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+    message: "Bravo Dr. Gibert, je te souhaite plein de bonnes choses pour la suite, félicitations et allez les verts ✨"
   )
 
   Friend.create!(
@@ -158,7 +158,7 @@ puts 'Destroying questions, friends and games'
   Friend.create!(
     name: "Victoire",
     avatar: ActionController::Base.helpers.asset_path('avatars/vic.png'),
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+    message: "Bravo mon chat t'es le plus fort comme toujours!"
   )
 
   Friend.create!(
@@ -170,6 +170,6 @@ puts 'Destroying questions, friends and games'
   Friend.create!(
     name: "Lucille",
     avatar: ActionController::Base.helpers.asset_path('avatars/lucille.png'),
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam"
+    message: "Félicitations pour cette thèse! Je suis très contente d'avoir eu la chance de croiser ton chemin (comme quoi le labo de Saint-Etienne aura eu des points positifs 😉) et que tu sois arrivé à avoir une très belle thèse! Tu le mérites! Je te souhaite pleins de belles choses pour la suite autant côté professionnel que personnel! Pleins de bisous et à bientôt j'espère!"
   )
   puts 'game created'
