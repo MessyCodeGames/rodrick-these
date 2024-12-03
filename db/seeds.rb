@@ -80,9 +80,9 @@ puts 'Destroying questions, friends and games'
 
   Question.create!(
     number: 9,
-    question: "Placeholder en attente: quelle est la 1ère réponse?",
-    answers: ["1", "2", "3", "4"],
-    answer: "1"
+    question: "Attention fun fact! Lequel de ces 4 fun facts est vrai?",
+    answers: ["Un corps humain contient 250 mg d'or en tout!", "Un crayon à papier peut dessiner une ligne de 12 000 km", "Les humains ont envoyé un homme sur la lune avant d'avoir mis des roulettes sur les valises", "Les astronautes n'ont pas le droit de vote dans l'espace"],
+    answer: "Les humains ont envoyé un homme sur la lune avant d'avoir mis des roulettes sur les valises"
   )
 
   Question.create!(
